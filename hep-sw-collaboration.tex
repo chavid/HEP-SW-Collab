@@ -49,7 +49,7 @@
 %%% END Article customizations
 
 \title{HEP SW Collaboration: a few ideas...}
-\author{Michel Jouvin, Sébastien Binet, David Rousseau}
+\author{Michel Jouvin, S\'ebastien Binet, David Rousseau}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 
@@ -58,28 +58,93 @@
 
 \section{Context}
 
-Next runs of LHC experiments and new generation of HEP experiments are challenging HEP software with an unprecedented data deluge. At the same time the budget constraint everywhere gives no choice but impoving HEP software performance by a factor of magnitude in the next 5 to 10 years. HEP is not unique in facing such a challenge but has a handicap: most of its computing problems are sequential in essence when most of the performance improvement in new processor architectures comes from parallelism (many cores, vector instructions....).
+Next runs of LHC experiments and new generation of HEP experiments are
+challenging HEP software with an unprecedented data deluge. At the
+same time the budget constraint everywhere gives no choice but
+impoving HEP software performance by a factor of magnitude in the next
+5 to 10 years. HEP is not unique in facing such a challenge but has a
+handicap: most of its computing problems are sequential in essence
+when most of the performance improvement in new processor
+architectures comes from parallelism (many cores, vector
+instructions....).
 
-HEP benefits from a rich but fragmented software ecosystem made of a many different type of packages covering simulation, analysis, frameworks... Some of them are produced and maintain by large collaborations (GEANT4, ROOT), others are developed and maintained by experiments, sometimes in common like GAUDI, and many packages have been started by an individual or a very small team. This is both a strengh and a weakness for adressing the challenges ahead of us. This is a strengh because we have a lot of people involved in SW development, covering a wide range of areas, and this diversity is fostering innovation. On the other hand, this is also a weakness because of the risk of effort duplication at a time where the manpower is limited if not in shortage. Some sort of coordination between projects is the only possible answer to get the benefit of our diversity without paying the price of the fragmentation.
+HEP benefits from a rich but fragmented software ecosystem made of
+many different types of packages covering simulation, analysis,
+frameworks... Some of them are produced and maintain by large
+collaborations (GEANT4, ROOT), others are developed and maintained by
+experiments, sometimes in common like GAUDI, and many packages have
+been started by an individual or a very small team. This is both a
+strengh and a weakness for adressing the challenges ahead of us. This
+is a strengh because we have a lot of people involved in SW
+development, covering a wide range of areas, and this diversity is
+fostering innovation. On the other hand, this is also a weakness
+because of the risk of efforts duplication at a time where manpower is
+limited if not in shortage. Some sort of coordination between projects
+is the only possible answer to get the benefit of our diversity
+without paying the price of the fragmentation.
 
-HEP has a rich tradition of software development, assessed by its two flagship projects, ROOT and GEANT4, now used outside the community. At the same time, we have to learn from this history that almost all the major software products now in use in the community have been started by some individuals or groups to fullfil user/experiment needs but never by a management decision. Sometimes, projects have been started as "innovation" despite the management "hostility". At the same time, those projects, in their fight to be recognized, were not always open to new ideas and took time to recognize them. With this history, HEP is not unique. The open-source model that has been so successful in the last 10 years was invented has an answer to the same problems: every project needs innovation and new ideas to evolve and a top-down managed project has difficulty to integrate new contributors and hardly benefits from new ideas. In this sense, the proposed HEP SW collaboration is a way of recognizing that HEP learnt from the open-source experience and its success to foster innovation and to get many different parties involved in the same project.
+HEP has a rich tradition of software development, assessed by its two
+flagship projects, ROOT and GEANT4, now used outside the community. At
+the same time, we have to learn from this history that almost all the
+major software products now in use in the community have been started
+by some individuals or groups to fullfil user/experiment needs but
+never by a management decision. Sometimes, projects have been started
+as "innovation" despite the management "hostility". At the same time,
+those projects, in their fight to be recognized, were not always open
+to new ideas and took time to recognize them. With this history, HEP
+is not unique. The open-source model that has been so successful in
+the last 10 years was invented has an answer to the same problems:
+every project needs innovation and new ideas to evolve and a top-down
+managed project has difficulty to integrate new contributors and
+hardly benefits from new ideas. In this sense, the proposed HEP SW
+collaboration is a way of recognizing that HEP learnt from the
+open-source experience and its success to foster innovation and to get
+many different parties involved in the same project.
 
-The two main challenges we are facing are an efficient access to large volume of distributed data and parallelization. A lot of expertise in these areas existss outside HEP. Even though computing models may be different, we can benefit from these expertises if we are able to liaise with these other communities that includes commercial actors, in particular for big data. Several existing collaborations at the local level also shown that the computer sciences is interested to work with us as we both a demanding use case and a community with already a significant expertise allowing real collaborations.
+The two main challenges we are facing are an efficient access to large
+volume of distributed data and parallelization. A lot of expertise in
+these areas exists outside HEP. Even though computing models may be
+different, we can benefit from these expertises if we are able to
+liaise with these other communities that includes commercial actors,
+in particular for big data. Several existing collaborations at the
+local level also shown that the computer sciences is interested to
+work with us as we both a demanding use case and a community with
+already a significant expertise allowing real collaborations.
 
 \section{Goals}
 
-- Umbrella organisation offering a lightweight coordination
-- Optimize the effort on different kind of software by avoiding/limiting duplication when not source of innovation
-- Foster innovation through incubator activities
-- Learn from the major software foundation experiences: Apache, Eclipse
- 
+\begin{itemize}
+ \item Umbrella organisation offering a lightweight coordination
+ \item Optimize the effort on different kind of software by
+   avoiding/limiting duplication when not source of innovation
+ \item Foster innovation through incubator activities
+ \item Learn from the major software foundation experiences: Apache, Eclipse
+\end{itemize}
+
 \section{Development Model}
 
 Software development models evolved dramattically in the last decade as a result of two different processes:
 
 \begin{itemize}
-\item Emergence of Agile methodolgies: breaking from traditional waterfall metodologies where the iteration cycle is very slow, agile methodologies put user needs ("user stories") at the center of the development process with short interation cycles and demonstration at the end of each development cycles. The result is a user-driven evolution of the product, one of the characteristic of the most successful software packages both in HEP and outside the community. The HEP software inventory recently made by P. Elmer pointed that this was an important feature shared by all successful tools and packages in our community. ROOT has been an early adopter of this methodology and demonstrated it could be successful at a large scale.
-\item Social coding as implemented by successful platforms like GitHub and BitBucket. These platforms allow an easy aggregation of external or occasional contributors and they provide tools helping the communitation betwenn project members and making the management of a project reasonnably easy even with a large number of contributors.
+\item Emergence of Agile methodolgies: breaking from traditional
+  waterfall metodologies where the iteration cycle is very slow, agile
+  methodologies put user needs ("user stories") at the center of the
+  development process with short interation cycles and demonstration
+  at the end of each development cycles. The result is a user-driven
+  evolution of the product, one of the characteristic of the most
+  successful software packages both in HEP and outside the
+  community. The HEP software inventory recently made by P. Elmer
+  pointed that this was an important feature shared by all successful
+  tools and packages in our community. ROOT has been an early adopter
+  of this methodology and demonstrated it could be successful at a
+  large scale.
+
+\item Social coding as implemented by successful platforms like GitHub
+  and BitBucket. These platforms allow an easy aggregation of external
+  or occasional contributors and they provide tools helping the
+  communitation betwenn project members and making the management of a
+  project reasonnably easy even with a large number of contributors.
+
 \end{itemize}
 
 
