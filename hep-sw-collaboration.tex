@@ -49,7 +49,7 @@
 %%% END Article customizations
 
 \title{HEP SW Collaboration: a few ideas...}
-\author{Michel Jouvin, S\'ebastien Binet, David Rousseau}
+\author{Michel Jouvin, S\'ebastien Binet, David Rousseau, David Chamont}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 
@@ -180,6 +180,29 @@ it should not be a requirement to be a "hosted project" before becoming an "endo
 started as R\&D activites: they will becomoe an "endorsed" project when reaching maturity. In particular in the initial phase of the collaboration,
 it is envisionned that several existing projects have vocation to become immediately an "endorsed" projects.
 
+\subsection{Marketplace}
+
+I am a physicist and Iam about to write an application for my own analysis. This application has no objective to become a standard
+package or even a package of general interest. I don't intend to reinvent the wheel and I'd like to find good
+packages for the math and the visualisation I have to do. I'm interested in finding a "marketplace"\footnote{This word might not be the best choice.}
+where I can easily identify available packages that may fit my needs with some guarantee about their quality,
+their support and how well they interoperate between each others.
+
+I heard about the HEP Software Collaboration and I found it was a good place to start my search.
+I was very positively surprised and I particularly appreciated:
+\begin{itemize}
+\item the marketplace area: it was very easy to search through all the projects hosted by the collaboration, well organized
+in relevant categories and with a rich set of tags.
+\item the overview documentation for each project that provided a clear description of the package features, who was
+developping it, the level of support I could expect, all in a consistent format.
+\item the single point of contact for all projects through the collaboration issue tracker.
+\item easy access to the source code.
+\item a clear, open-source, licensing policy.
+\end{itemize}
+
+I appreciate that if at some point there is some interest for my application, I may apply to become a "hosted" project but that there is no obligation to do it.
+
+
 \section{Goals}
 
 Based on the previous user stories, we propose to define the following main goal for the HEP Software
@@ -278,7 +301,12 @@ source of errors...
 \item a service to host project documentation in a wiki-like (lightweight) format. Ideally, this
 service should make easy collective contribution to the documentation with a peer-review (lightweight) process. A good example
 is GitHub Pages service based on Jekyll, based on the contents of a Git repository where contributions can be done through pull
-requests.
+requests. Each project will have to maintain at least one page describing the project goals, who is participating to its
+development, and providing links to the project documentation if hosted elsewhere.
+
+\item a "marketplace" that will allow easy searching/browsing into all the projects "hosted" or "endorsed" by the collaboration.
+All the projects will be classified into main categories and will have tags attached to them to help identifying them. Search
+criteria will also include authors, level of support...
 
 \end{itemize}
 
